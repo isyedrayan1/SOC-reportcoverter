@@ -8,8 +8,11 @@ cd <repository-directory>
 
 If you have downloaded zip file:
 1.Unzip and open terminal and go to project directory and make an virtual env if there isnt any venv by typing : python -m venv .venv
+
 2.If there is venv created or already have activate it by typing: .venv\Scripts\activate
+
 3.Install dependencies: pip install -r requirements.txt
+
 Note: Always download the dependencies in virtual environment(venv) by creating(step1) and activating it(step2)
 
 Now to run the app run this command
