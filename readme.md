@@ -7,6 +7,7 @@ Clone the repository:git clone <repository-url>
 cd <repository-directory>
 
 If you have downloaded zip file:
+
 1.Unzip and open terminal and go to project directory and make an virtual env if there isnt any venv by typing : python -m venv .venv
 
 2.If there is venv created or already have activate it by typing: .venv\Scripts\activate
