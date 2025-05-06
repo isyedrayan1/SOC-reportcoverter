@@ -25,9 +25,11 @@ if st.button("Generate Report"):
                 data["month_year"] = month_year
                 data["month"] = month_year.split(" ")[0]
 
-            # Generate PPTX
+            # Dynamically generate the output file name using the month/year input
             sanitized_month_year = month_year.replace(" ", "_")  # e.g., April_2025
-            output_file = f"SOC_Monthly_Report_{sanitized_month_year}.pptx"
+            output_file = f"SOC_Monthly_Report_{sanitized_month_year}.pptx"  # Use the dynamic file name
+
+            # Generate PPTX
             generate_pptx(data, output_file)
 
             # Provide download link
@@ -39,11 +41,12 @@ if st.button("Generate Report"):
                     mime="application/vnd.openxmlformats-officedocument.presentationml.presentation"
                 )
             st.success("Report generated successfully!")
+            
+            # Clean up generated file after download (in the same block)
+            if os.path.exists(output_file):
+                os.remove(output_file)
+
         except Exception as e:
             st.error(f"Error: {str(e)}")
     else:
         st.error("Please upload an Excel file.")
-
-# Clean up generated file
-if os.path.exists("SOC_Monthly_Report.pptx"):
-    os.remove("SOC_Monthly_Report.pptx")

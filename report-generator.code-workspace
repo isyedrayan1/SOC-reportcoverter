@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../report-generator"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../rprt3"
+		}
+	],
+	"settings": {}
+}
